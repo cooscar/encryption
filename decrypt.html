@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="encyrptions.css">
+</head>
+<body>
+    <header><a href="main.html">Home</a></header>
+    <p class="info">
+        This is a simple encryption website. It uses a basic encryption algorithm to encrypt text using a key.
+        <br>
+        Enter the text you want to encrypt and the key, then click the "Encrypt" button.
+        <br>
+        The encrypted text will be displayed below.
+
+    </p>
+
+
+    <div class="row">
+        <input type="text" id="inputText" placeholder="Enter text to encrypt" class="input-style">
+        <input type="text" id="key" placeholder="Enter key" class="input-style">
+        <button class="neu-button" onclick="decrypt()">Decrypt</button>
+
+    </div>
+    
+    <p id="output"></p>
+
+    <script src="decrypt.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 Oscar Ford</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+.neu-button {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 12px 20px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+  }
+  
+  .neu-button:hover {
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  }
+  
+  .neu-button:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  }
+
+
+  .input-style {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #000000;
+    outline: none;
+  }
+  
+  .input-style:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0, 0);
+  }
+
+
+  .row {
+    display: flex;
+    justify-content: center;
+    top: auto;
+  }
+
+  .output{
+    text-align: center;
+  }
+
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .info{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+  }
