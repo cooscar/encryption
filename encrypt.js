@@ -9,18 +9,13 @@ function change() {
 
 
 
-    let alph = "123456789abcdefghijklmnopqrstuvwxyz";
+    const alph = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':,.<>?/~`";
     const map = {};
     let result = "";
 
-    for(let i=0; i<alph.length; i++) {
-        map[alph[i]] = i + key;
-        
-        if (map[alph[i]] > 34){
-            map[alph[i]] -= 35;
-        }
+    for (let i = 0; i < alph.length; i++) {
+        map[alph[i]] = (i + key) % alph.length;
     }
-    
     
 
     for(let i=0; i < value.length; i++) {

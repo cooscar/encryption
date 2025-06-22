@@ -1,35 +1,29 @@
-
-
-
-
 function decrypt() {
-
     const value = document.getElementById("inputText").value.toLowerCase();
     const output = document.getElementById("output");
     const key = parseInt(document.getElementById("key").value);
 
-
-    let alph = "123456789abcdefghijklmnopqrstuvwxyz";
-    const map = {};
+    const alph = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':,.<>?/~`";
     let result = "";
 
-    for(let i=0; i<alph.length; i++) {
-        map[alph[i]] = i - key;
-        
-        if (map[alph[i]] < 0){
-            map[alph[i]] += 35;
-        }
-    }
-    
-    for(let i=0; i < value.length; i++) {
-        let char = value[i];
+    for (let i = 0; i < value.length; i++) {
+        const char = value[i];
 
-        if (char !== " "){
-            result += alph[map[value[i]]];
-        } else {
+        if (char === " ") {
             result += " ";
+            continue;
         }
+
+        const index = alph.indexOf(char);
+
+        if (index === -1) {
+            result += "?"; 
+            continue;
+        }
+
+        const newIndex = (index - key + alph.length) % alph.length;
+        result += alph[newIndex];
     }
-    
-output.innerHTML = result;
+
+    output.innerHTML = result;
 }
