@@ -21,7 +21,7 @@ function decrypt() {
             continue;
         }
 
-        // Fix: Add alph.length multiple times to ensure positive result
+       
         const newIndex = ((index - key) % alph.length + alph.length) % alph.length;
         result += alph[newIndex];
     }
